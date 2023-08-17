@@ -1,0 +1,21 @@
+@use 'var'
+@use 'mixin'
+@use 'initial'
+@use 'nav'
+@use 'main'
+@use 'button'
+
+img 
+    max-width: 100%
+    
+
+.overflow
+    @media screen and (max-width: 800px) 
+        background-color: black
+        display: none
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        width: 30%
+        opacity: 0.7

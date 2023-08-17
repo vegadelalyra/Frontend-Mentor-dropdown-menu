@@ -1,0 +1,45 @@
+@use 'var'
+@use 'mixin'
+
+
+// sign buttons (login && register) [BEGINNING]
+.outlined-btn, 
+.transparent-btn
+    @include mixin.signButtons
+
+.transparent-btn
+    min-width: 140px
+
+    border: none
+    
+    &:hover
+        color: var.$Almost-White
+        font-weight: 700
+
+
+.outlined-btn 
+    border: 1px solid var.$Almost-Black
+    min-width: 140px
+
+    &:hover
+        color: var.$Almost-Black
+        font-weight: 700
+// sign buttons (login && register) [ENDING]
+
+
+// main button (learn more) [BEGINNING]  
+.primary-btn 
+    background-color: var.$Almost-Black
+    width: fit-content
+    padding: 1rem 2rem
+    color: var.$Almost-White
+    border: 1px solid var.$Almost-Black
+    border-radius: 10px
+    cursor: pointer
+
+    &:hover 
+        background-color: var.$Almost-White
+        border: 1px solid var.$Almost-Black
+        color: var.$Almost-Black
+        font-weight: 700
+// main button (learn more) [ENDING]  

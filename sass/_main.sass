@@ -1,0 +1,51 @@
+@use 'var'
+@use 'mixin'
+
+.main 
+    display: flex
+    align-items: center
+    justify-content: center
+    height: calc(100vh - 80px)
+    @media screen and (max-width: 800px)
+        align-items: flex-start
+
+    &-container  
+        display: grid
+        max-width: 1100px
+        gap: 5rem
+        grid-template-columns: 1fr 1fr
+        @media screen and (max-width: 800px)
+            display: flex
+            flex-direction: column-reverse
+
+    &-left 
+        display: flex
+        flex-direction: column 
+        justify-content: space-evenly
+        @media screen and (max-width: 800px)
+            align-items: center
+            text-align: center
+            gap: 2rem
+
+    &-heading 
+        font-size: 4rem
+        @media screen and (max-width: 800px)
+            font-size: 2.2rem
+        
+        & br 
+            @media screen and (max-width: 800px)
+                display: none
+    
+    &-content 
+        font-size: 18px
+        line-height: 1.8
+        color: var.$Medium-Gray
+
+.logos
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media screen and (max-width: 800px)
+        width: 100%
+        padding-inline: 1rem
+        flex-wrap: wrap
