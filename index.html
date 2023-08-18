@@ -11,7 +11,8 @@
     />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="app.js" defer></script> -->
+    <script src="main.js" defer></script>
+    <script>const a = '2323'</script>
   </head>
   <body>
     <nav class="nav">
@@ -20,7 +21,7 @@
           <div class="nav-logo"><img src="./images/logo.svg" alt="logo" /></div>
           <ul class="nav-links">
             <li>
-              Features
+              <p class="dropDownNavLink">Features</p>
               <img
                 src="./images/icon-arrow-down.svg"
                 class="arrow"
@@ -42,7 +43,7 @@
               </div>
             </li>
             <li>
-              Company
+              <p class="dropDownNavLink">Company</p>
               <img
                 src="./images/icon-arrow-down.svg"
                 class="arrow"
@@ -54,8 +55,12 @@
                 <p class="sub-link">Blog</p>
               </div>
             </li>
-            <li>Careers</li>
-            <li>About</li>
+            <li>
+              <p class="dropDownNavLink">Careers</p>
+            </li>
+            <li>
+              <p class="dropDownNavLink">About</p>
+            </li>
           </ul>
         </div>
         <div class="mobile-menu-btn">
@@ -64,7 +69,7 @@
         <div class="mobile-menu">
           <ul class="mobile-links">
             <li>
-              <p>
+              <p class="dropDownNavLink">
                 Features
                 <img
                   src="./images/icon-arrow-down.svg"
@@ -88,7 +93,7 @@
               </div>
             </li>
             <li>
-              <p>
+              <p class="dropDownNavLink">
                 Company
                 <img
                   src="./images/icon-arrow-down.svg"
@@ -103,8 +108,12 @@
                 <p class="sub-link">Blog</p>
               </div>
             </li>
-            <li>Careers</li>
-            <li>About</li>
+            <li>
+              <p class="dropDownNavLink">Careers</p>
+            </li>
+            <li>
+              <p class="dropDownNavLink">About</p>
+            </li>
           </ul>
         </div>
         <div class="nav-right">
@@ -144,5 +153,55 @@
       </div>
     </main>
     <div class="overflow"></div>
+
+    <script>
+      console.log('hi!')
+      console.log('You can run "fireASafeWhileTrue(withThisLimit)" on the console!')
+      console.log("...And let's see what happen!")
+
+      function* finiteWhileTrue(limit = 5, inclusiveOrExclusive = 1, step = 0, pace = 1) {
+          while (true) {
+              yield step % (limit + inclusiveOrExclusive)
+              step += pace
+          }
+      }
+
+      function iterateGenerator(ITERATIONS = 5, ourGenFunction) {
+          // Iterate through the yield values three times using a loop
+          for (let i = 0; i <= ITERATIONS * 3; i++) {
+              const { value, done } = ourGenFunction.next()
+              if (done) break
+
+              console.log(value)
+          }
+      }
+
+      function iterateGeneratorFake(ITERATIONS = 5, ourGenFunction) {
+          console.log('\n -- [EXECUTING A WHILE(TRUE)] 3 TIMES -- \n')  
+
+          // Iterate through the yield values three times using a loop
+          for (let i = 0; i <= ITERATIONS * 3; i++) {
+              const { value, done } = ourGenFunction.next()
+              if (done) break
+
+              console.log(value)
+          }
+          console.log('.\n.\n.\n')
+          console.log('Cool, right?')
+          console.log('You can log the both functions to achieve this')
+          console.log('with howToWhileTrueAndNotDie()')
+      }
+
+      function fireASafeWhileTrue(LIMIT = 5) {
+        const ourGenFunction = finiteWhileTrue(LIMIT)
+        return iterateGeneratorFake(LIMIT, ourGenFunction)
+      }
+
+      function howToWhileTrueAndNotDie() {
+        console.log(finiteWhileTrue.toString())
+        console.log(iterateGenerator.toString())
+      }
+
+    </script>
   </body>
 </html>

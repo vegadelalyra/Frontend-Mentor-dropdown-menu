@@ -59,9 +59,6 @@ body {
   position: relative;
   user-select: none;
 }
-.nav-links li:hover {
-  color: hsl(0, 0%, 8%);
-}
 
 .mobile-menu,
 .mobile-menu-btn {
@@ -135,6 +132,15 @@ body {
   align-items: center;
   width: 150px;
   gap: 0.5rem;
+}
+
+.one,
+.two {
+  color: hsl(0, 0%, 8%);
+}
+.one p:hover,
+.two p:hover {
+  color: blue;
 }
 
 .one {
@@ -235,7 +241,7 @@ body {
   border: none;
 }
 .transparent-btn:hover {
-  color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
   font-weight: 700;
 }
 
@@ -279,6 +285,14 @@ img {
     width: 30%;
     opacity: 0.7;
   }
+}
+
+.active {
+  color: blue;
+}
+
+.dropDownNavLink:hover {
+  color: hsl(0, 0%, 8%);
 }
 
 /*# sourceMappingURL=style.css.map */
