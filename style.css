@@ -108,6 +108,9 @@ body {
     gap: 1rem;
   }
 }
+.mobile-links li p:hover {
+  color: blue;
+}
 @media screen and (max-width: 800px) {
   .mobile-sub {
     display: none;
@@ -294,6 +297,11 @@ img {
 
 .dropDownNavLink:hover {
   color: hsl(0, 0%, 8%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
