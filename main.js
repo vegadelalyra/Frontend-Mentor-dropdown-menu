@@ -1,4 +1,6 @@
 import './src/logoConfeti.js'
+import './src/register.js'
+import './src/login.js'
 
 const desktopNavLinks = document.querySelectorAll(".nav-links li")
 const hamburguerMenuButton = document.querySelector(".mobile-menu-btn")
